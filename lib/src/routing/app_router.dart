@@ -11,7 +11,10 @@ enum AppRoute {
 @Riverpod(keepAlive: true)
 GoRouter goRouter(GoRouterRef ref){
 final loginRepository = ref.watch(loginRepositoryProvider);
-return GoRouter(routes: [
+return GoRouter(
+  initialLocation: "/",
+  debugLogDiagnostics: false,
+  routes: [
   
 ]);
 }
